@@ -1,0 +1,15 @@
+# Carotenoid-Diet-Project_BIOL6220
+Poison frog color analysis for Practical Computing Fall 2022
+## Background Removal using GIMP
+1. 
+## Image Analysis using FIJI
+1. Open new image
+2. Set scale using measurements of body size
+3. Carefully trace full body using freehand selection
+4. Analyze > measure > area
+5. Carefully trace one color
+6. Analyze > measure > area
+## Excel
+1. Input full body area
+2. Input first color measurements summed
+3. Substract first color from full body area to get area of second color
