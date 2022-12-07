@@ -1,0 +1,45 @@
+---
+title: "Carotenoid Diet Project"
+output:
+  github_document: default
+  html_document: default
+---
+```{r}
+imitator.diet <- read.csv('~/OneDrive - East Carolina University/dietprojectfull.csv', header = T)
+imitator.diet
+```
+```{r}
+mean(imitator.diet$Sauce_Carotenoid)
+mean(imitator.diet$Sauce_Yeast)
+
+imitator_sauce.t2 <- t.test(imitator.diet$Sauce_Carotenoid , imitator.diet$Sauce_Yeast)
+imitator_sauce.t2
+```
+
+```{r}
+boxplot(imitator.diet$Sauce_Carotenoid, imitator.diet$Sauce_Yeast)
+```
+```{r}
+mean(imitator.diet$Varadero_Carotenoid)
+mean(imitator.diet$Varadero_Yeast)
+
+imitator_varadero.t2 <- t.test(imitator.diet$Varadero_Carotenoid , imitator.diet$Varadero_Yeast)
+imitator_varadero.t2
+```
+```{r}
+boxplot(imitator.diet$Varadero_Carotenoid, imitator.diet$Varadero_Yeast)
+```
+```{r}
+#install.packages("vioplot", dependencies = T)
+library(vioplot)
+with(imitator.diet, vioplot(
+    Sauce_Carotenoid,Sauce_Yeast, col=c("darkorchid","gray70"), names= c("Carotenoid", "Carotenoid Deficient"), main= "Sauce morph pigment changes under carotenoid diet variation", ylab = "Ratio of Orange to Black Pigmentation"
+))
+```
+
+```{r}
+with(imitator.diet, vioplot(
+    Varadero_Carotenoid,Varadero_Yeast, col=c("orange","gray85"), names= c("Carotenoid", "Carotenoid Deficient"), main= "Varadero morph pigment changes under carotenoid diet variation", ylab = "Ratio of Orange to Black Pigmentation"
+))
+```
+
