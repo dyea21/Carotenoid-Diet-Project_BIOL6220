@@ -7,6 +7,8 @@ Ranitomeya imitator individuals were fed carotenoid rich diets in one treatment 
 This piece of the project is investigating if a carotenoid rich diet will increase the amount of orange pigmentation along with the brightness of the orange pigmentation compared to the black pigmentation that is also present in these individuals. 
 Because the images were not standardized, only dorsal coloration was used and any coloration present on the visible legs was not taken into consideration during the quanitification.
 
+ADD QUESTION/AIM AND MAKE MORE READABLE FOR EASE OF UNDERSTANDING
+
 ## Image Analysis Explanation
 Image analysis was conducted using GIMP and FIJI, with Excel being used for the quanitifcation of color variation (see Image Analysis using GIMP, FIJI, Excel file for detailed steps). The images were analyzed using FIJI tracing of colors because these images were not standardized and were not meant for this type of image analysis. Another way to analyze images is to create a binary photo and convert it to black and white, where FIJI will calculate the area of white. This was not able to be done for this project due to the amount of glare present in the images.
 
