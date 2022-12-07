@@ -1,5 +1,5 @@
-# Carotenoid-Diet-Project_BIOL6220
-Poison frog color quantification
+# Poison frog color quantification
+Carotenoid-Diet-Project_BIOL6220
 
 ## Project Justification
 Carotenoids are responsible for the production of orange and red pigmentation and also play a role in developmental pathways. This project was started as a dissertation chapter focused on spectral analyses. 
