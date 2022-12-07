@@ -1,0 +1,57 @@
+---
+title: "Carotenoid Diet Project"
+output:
+  github_document: default
+  html_document: default
+---
+```{r}
+# Import CSV file into RStudio for statistical anlaysis
+imitator.diet <- read.csv('~/OneDrive - East Carolina University/dietprojectfull.csv', header = T)
+imitator.diet
+```
+```{r}
+# Calculate mean of Sauce treatments
+mean(imitator.diet$Sauce_Carotenoid)
+mean(imitator.diet$Sauce_Yeast)
+
+# Two-sample t-test for unpaired treatments (, instead of ~ for unpaired)
+imitator_sauce.t2 <- t.test(imitator.diet$Sauce_Carotenoid , imitator.diet$Sauce_Yeast)
+imitator_sauce.t2
+```
+
+```{r}
+# Basic box plot for visualization of means
+boxplot(imitator.diet$Sauce_Carotenoid, imitator.diet$Sauce_Yeast)
+```
+```{r}
+# Caclulate means of Varadero treatments
+mean(imitator.diet$Varadero_Carotenoid)
+mean(imitator.diet$Varadero_Yeast)
+
+# Two-Sample t-test for unpaired treatments
+imitator_varadero.t2 <- t.test(imitator.diet$Varadero_Carotenoid , imitator.diet$Varadero_Yeast)
+imitator_varadero.t2
+```
+```{r}
+# Basic box plot for visualization of means
+boxplot(imitator.diet$Varadero_Carotenoid, imitator.diet$Varadero_Yeast)
+```
+```{r}
+#install.packages("vioplot", dependencies = T)
+
+# Invoke the library vioplot to produce violin plots
+library(vioplot)
+
+# Create violin plot to visualize means and variation in data using vioplot package including labels and colors of boxes
+with(imitator.diet, vioplot(
+    Sauce_Carotenoid,Sauce_Yeast, col=c("darkorchid","gray70"), names= c("Carotenoid", "Carotenoid Deficient"), main= "Sauce morph pigment changes under carotenoid diet variation", ylab = "Ratio of Orange to Black Pigmentation"
+))
+```
+
+```{r}
+# Create violin plot to visualize means and variation in data using vioplot package including labels and colors of boxes
+with(imitator.diet, vioplot(
+    Varadero_Carotenoid,Varadero_Yeast, col=c("orange","gray85"), names= c("Carotenoid", "Carotenoid Deficient"), main= "Varadero morph pigment changes under carotenoid diet variation", ylab = "Ratio of Orange to Black Pigmentation"
+))
+```
+
